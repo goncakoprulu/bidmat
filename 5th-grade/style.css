@@ -1,0 +1,501 @@
+
+/*-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1. - FONTS
+
+    2. - Global
+
+    3. - CUSTOMIZE THE CAROUSEL
+
+    4. - RESPONSIVE
+
+-----------------------------------------------------------------------------------*/
+
+/* 1. - FONTS
+-------------------------------------------------- */
+
+@font-face {
+    font-family: 'ChunkFiveEx';
+    src: url('../font/ChunkFiveEx/ChunkFiveEx.eot');
+    src: url('../font/ChunkFiveEx/ChunkFiveEx.eot?#iefix') format('embedded-opentype'),
+        url('../font/ChunkFiveEx/ChunkFiveEx.woff') format('woff'),
+        url('../font/ChunkFiveEx/ChunkFiveEx.ttf') format('truetype'),
+        url('../font/ChunkFiveEx/ChunkFiveEx.svg#ChunkFiveEx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2. - Global
+-------------------------------------------------- */
+
+* {
+    outline: 0 !important;
+    font-weight: 300;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+}
+
+a,
+button {
+    outline: 0 !important;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.pr-9 {
+    padding-right: 2.25rem; /* 36px */
+}
+
+/* NAV-BAR */
+
+.navbar {
+    background-color: transparent;
+    padding: 0 20rem;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-brand{
+    color: #fff !important;
+    font-weight: 700;
+}
+
+.nav-item{
+    padding: 0.4rem 2rem;
+    border: #f6a525 solid 0.1rem;
+    border-radius: 4rem;
+    margin: 1rem 0.4rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item:hover{
+    background-color: #f6a525;
+}
+
+.nav-link{
+    color: #fff !important;
+
+}
+
+/* 3. - CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.carousel {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.carousel-indicators {
+    bottom: 48px;
+}
+
+.carousel-control {
+    z-index: 1;
+    background: none;
+    opacity: .9;
+    width: auto;
+}
+
+.carousel-control-next, 
+.carousel-control-prev {
+    opacity: 1;
+}
+
+.carousel-control-next img, 
+.carousel-control-prev img {
+    width: 30px;
+    height: 30px;
+}
+.carousel-inner {
+    display: flex;
+    height: 100vh;
+    align-items: center; 
+}
+
+.carousel-inner .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease;
+    min-height: 100vh;
+}
+
+.carousel-caption {
+    text-align: center;
+    padding: 0;
+    position: relative;
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 992px) {
+    .item_media {
+        padding-bottom: 4rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-caption {
+        padding: 0 1rem;
+    }
+    .item_media {
+        padding-bottom: 6rem;
+    }
+    .carousel-caption {
+        flex: 1 1 100%;
+        margin: 5px;
+    }
+}
+.carousel-caption h1 {
+    color: #ffffff;
+    font-size: 76px;
+    border-left: 1px solid #56b3a5;
+    border-right: 1px solid #56b3a5;
+    display: inline-block;
+    padding: 20px 80px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.carousel-caption h1,
+.item_name {
+    font-family: 'ChunkFiveEx';
+}
+
+.item_name {
+    font-size: 50px;
+    line-height: normal;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.item_name:after {
+    content: "";
+    width: 98px;
+    height: 4px;
+    background-color: #f6a525;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.item_img {
+    max-width: 100%;   
+}
+
+.item_media {
+    padding-bottom: 7rem;
+}
+
+.item_shadow {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    max-width: 100%;  
+}
+
+.item_badge {
+    width: 105px;
+    height: 105px;
+    position: absolute;
+    right: -36px;
+    top: 77%; 
+    opacity: .5;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    background-color: #f6a525;
+    color: #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;  
+}
+
+.carousel-inner .carousel-item.active .item_badge {
+    -webkit-transform: translateY(-77%);
+        -ms-transform: translateY(-77%);
+            transform: translateY(-77%);
+    opacity: 1;
+}
+
+.item_link {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px 15px;
+    display: inline-block;
+    border: 1px solid #f6a525;
+    border-radius: 30px;
+    color: #fff!important;
+    margin-top: 30px;
+}
+
+.item_link:hover {
+    background-color: #f6a525;
+    color: #fff!important;
+    border-color: transparent;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.badge_btext {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: normal;
+}
+
+.badge_stext {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: normal;
+}
+
+.carousel-caption h1 .border-top:before,
+.carousel-caption h1 .border-top:after,
+.carousel-caption h1 .border-bottom:before,
+.carousel-caption h1 .border-bottom:after {
+    content: '';
+    position: absolute;
+    width: 7%;
+    height: 1px;
+    background-color: #56b3a5;
+}
+
+.carousel-caption h1 .border-top:before {
+    top: 0px;
+    left: 0px;
+}
+
+.carousel-caption h1 .border-top:after {
+    top: 0px;
+    right: 0px;
+}
+
+.carousel-caption h1 .border-bottom:after {
+    bottom: 0px;
+    right: 0px;
+}
+
+.carousel-caption h1 .border-bottom:before {
+    bottom: 0px;
+    left: 0px;
+}
+
+.carousel-caption p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: right;
+    width: 85%;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.carousel-caption .fadeUp,
+.carousel-caption .fadeUpSlow {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s
+}
+
+.carousel-inner .carousel-item.active .carousel-caption .fadeUp {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+
+.carousel-caption .fade-slow {
+    -webkit-transition-delay: .4s;
+         -o-transition-delay: .4s;
+            transition-delay: .4s;
+}
+
+.carousel-caption .fade-medium {
+    -webkit-transition-delay: .6s;
+         -o-transition-delay: .6s;
+            transition-delay: .6s;
+}
+
+.carousel-indicators button[data-bs-target],
+.carousel-indicators button[data-bs-target].active {
+    width: 13px;
+    height: 13px;
+    border-width: 2px;
+    border-color: #fff;
+    margin: 0 8px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.carousel-indicators button[data-bs-target].active {
+    background-color: #fff;
+}
+
+.animate-bounce {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+}
+
+.animate-shadow {
+    -webkit-animation: shadow 1s infinite;
+            animation: shadow 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+    0%,to {
+        -webkit-transform: translateY(-5%);
+                transform: translateY(-5%);
+        -webkit-animation-timing-function: cubic-bezier(.8,0,1,1);
+                animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        -webkit-transform: none;
+                transform: none;
+        -webkit-animation-timing-function: cubic-bezier(0,0,.2,1);
+                animation-timing-function: cubic-bezier(0,0,.2,1)
+    }
+}
+
+@keyframes bounce {
+    0%,to {
+        -webkit-transform: translateY(-5%);
+                transform: translateY(-5%);
+        -webkit-animation-timing-function: cubic-bezier(.8,0,1,1);
+                animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        -webkit-transform: none;
+                transform: none;
+        -webkit-animation-timing-function: cubic-bezier(0,0,.2,1);
+                animation-timing-function: cubic-bezier(0,0,.2,1)
+    }
+}
+
+@-webkit-keyframes shadow {
+    0%,to {
+        -webkit-transform: scale(.8);
+                transform: scale(.8);
+        -webkit-animation-timing-function: cubic-bezier(.8,0,1,1);
+                animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        -webkit-transform: none;
+                transform: none;
+        -webkit-animation-timing-function: cubic-bezier(0,0,.2,1);
+                animation-timing-function: cubic-bezier(0,0,.2,1)
+    }
+}
+
+@keyframes shadow {
+    0%,to {
+        -webkit-transform: scale(.8);
+                transform: scale(.8);
+        -webkit-animation-timing-function: cubic-bezier(.8,0,1,1);
+                animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        -webkit-transform: none;
+                transform: none;
+        -webkit-animation-timing-function: cubic-bezier(0,0,.2,1);
+                animation-timing-function: cubic-bezier(0,0,.2,1)
+    }
+}
+
+
+/* 4. - RESPONSIVE
+-------------------------------------------------- */
+
+@media only screen and (max-width: 1160px) {
+    .carousel-caption {
+        left: 12%;
+        right: 12%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .item_name {
+        font-size: 38px;
+    }
+    .carousel-caption p {
+        width: 90%;
+    }
+    .item_media {
+        padding-bottom: 4rem;
+    }
+    .item_badge {
+        width: 90px;
+        height: 90px;
+    }
+    .badge_btext {
+        font-size: 28px;
+    }
+    .badge_stext {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-caption {
+        padding: 0 1rem;
+    }
+    .item_media {
+        padding-bottom: 6rem;
+    }
+    .item_badge {
+        width: 105px;
+        height: 105px;
+    }
+    .badge_btext {
+        font-size: 30px;
+    }
+    .badge_stext {
+        font-size: 20px;
+    }
+    .carousel-caption {
+        flex: 1 1 100%;
+        margin: 5px;
+    }
+}
